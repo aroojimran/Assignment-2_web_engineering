@@ -1,0 +1,77 @@
+﻿<html>
+
+<head>  <link rel="stylesheet" type="text/css" href="weather.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+ <script>
+$(document).ready(function() { 
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+  //    document.getElementById("demo").innerHTML = xhttp.responseText;
+      var obj =JSON.parse(xhttp.responseText);
+	console.log(obj);
+	//alert(obj.weather[0].main);
+	//alert(obj.main.temp);
+	
+$("#city").text("City:"+obj.name +"    " +  "Country: " + obj.sys.country);
+
+$("#condition").text("Condition:"+obj.weather[0].main);
+$("#temp").text("Temperature:"+obj.main.temp+ " C ");
+
+$("#max_min_temp").text("Maximum Temperature:"+obj.main.temp_max +" C "+"Minimum Temperature:"+obj.main.temp_min+" C ");
+    
+	$("#humidity").text("Humidity:" + obj.main.humidity);
+	$("#pressure").text("pressure:" + obj.main.pressure + " Torr ");
+	$("#sea_level").text("Sea Level : " + obj.main.sea_level+ " Km ");
+	$("#deg").text("Degree :" + obj.wind.deg + " degree ");
+	$("#speed").text("Speed :" + obj.wind.speed+ " MS ");
+	
+	}
+  };
+  xhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=Islamabad&units=metric&appid=2de143494c0b295cca9337e1e96b00e0", true);
+  xhttp.send();
+
+});
+    </script>
+
+	
+</head>
+<body>
+<div id="header">  Weather
+</div> 
+    
+   <div id="container">
+   
+  <br>
+   <div id="city">   <br></div>
+   
+   
+   
+   
+   
+   
+   
+   <div id="condition"> <br> <br>  </div>
+   <div id="main">   <span style="font-size:70px;"> Main  </span> <br>  <br> 
+	<div id="temp">  </div>
+
+<div id="max_min_temp">  </div>	
+	<div id="humidity"> </div>
+	<div id="pressure">  </div>
+	</div>
+	
+	<div id="Wind"> <span style="font-size:70px;"> Wind  </span>
+	
+	<br>  <br> <br>
+	<div id="deg"> </div>
+	<div id="speed">  </div>
+	
+	
+	</div>
+	<a href=main-html.html>
+	 <div style="font-size:30px; color:white; margin-top:-60px;">  Home </div>  </a>
+	</div>
+</body>
+</html>

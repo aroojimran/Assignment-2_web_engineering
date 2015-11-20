@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Analog Clock </title>
+<link href="clock.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+</head>
+<body style="background-color: #673AB7;">
+<div id="header">
+
+Clock
+</div>
+
+<div class="clock-circle">
+
+  <div class="clock-face">
+  
+   <div id="hour" class="clock-hour"></div>
+   <div id="minute" class="clock-minute"></div>
+   <div id="second" class="clock-second"></div>
+   <div id="zero"> 12 </div>
+   <div id="three"> 3 </div>
+   <div id="six"> 6 </div>
+   
+   <div id="nine">  9</div>
+  </div>
+  
+</div>
+<br> <br> <br>
+<div id="demo">
+
+
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+
+var analogclock = new analogClock();
+
+window.setInterval(function(){ 
+
+analogclock.run(); 
+
+}, 1000);
+document.getElementById("demo").innerHTML = Date();
+
+
+});
+</script>
+
+<script>
+function analogClock(){
+}
+analogClock.prototype.run = function() {
+    var date = new Date();    
+    var second = date.getSeconds()* 6; 
+    var minute = date.getMinutes()* 6 + second / 60;   
+    var hour = ((date.getHours() % 12) / 12) * 360 + 90 + minute / 12;
+	//alert(second);
+	//alert(minute);
+	//alert(hour);
+  jQuery('#hour').css("transform", "rotate(" + hour + "deg)");
+    jQuery('#minute').css("transform", "rotate(" + minute + "deg)");
+    jQuery('#second').css("transform", "rotate(" + second + "deg)");
+
+};
+</script>
+
+<div> <a href="C:\Users\Arooj Imran\Desktop\Assignment 2_web_engineering\main-html.html"> Home </a> </div>
+</body>
+</html>

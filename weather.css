@@ -1,0 +1,103 @@
+
+body
+{
+background-image:url('img-weather-3.jpg');
+
+}
+
+#header
+{
+background-color:black;
+text-align:center;
+font-size:60px;
+/* opacity:0.5; */
+color:#FFE4E1;
+
+}
+
+
+#city
+{
+position:relative;
+width:250px;
+height:150px;
+margin-top:50px;
+background-color:grey;
+text-align:center;
+opacity:0.5;
+font-size:30px;
+color:white;
+ border-style: solid;
+    border-width: 5px;
+	border-color:black;
+}
+#city:hover
+{
+background-color:orange;
+}
+#condition
+{
+position:relative;
+margin-top:20px;
+width:250px;
+height:150px;
+background-color:grey;
+text-align:center;
+font-size:30px;
+color:white;
+opacity:0.5;
+border-style: solid;
+    border-width: 5px;
+	border-color:black;
+}
+
+#condition:hover
+{
+background-color:orange;
+}
+#city:hover
+{
+background-color:orange;
+
+
+}
+
+#main:hover
+{
+background-color:orange;
+}
+#main
+{
+width:700px;
+height:500px;
+margin-left:310px;
+background-color:grey;
+margin-top:-360px;
+opacity:0.4;
+
+text-align:center;
+font-size:40px;
+color:white;
+border-style: solid;
+    border-width: 5px;
+	border-color:black;
+}
+#wind:hover
+{
+background-color:orange;
+}
+#wind
+{
+width:250px;
+height:500px;
+background-color:grey;
+margin-left:1050px;
+margin-top:-500px;
+opacity:0.5;
+text-align:center;
+font-size:30px;
+color:white;
+border-style: solid;
+    border-width: 5px;
+	border-color:black;
+}

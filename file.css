@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+background-color:white;
+ background-image:url('img-background6.jpg');
+
+}
+
+.wrapper {
+	width: inherit;
+	height: 600px;	
+}
+
+ #left
+ {
+ font-size:30px;
+ color:purple;
+ font-weight:bold;
+ position:absolute;
+ display:inline-block;
+ margin-top:-100px;
+ }
+ #right
+ {
+ font-size:30px;
+ color:purple;
+ font-weight:bold;
+ position:absolute;
+ margin-left:1200px;
+display:inline-block;
+margin-top:-100px;
+ }
+.cal_calendar th
+{
+        border:1px solid black;
+        //background-color:#ffffff;
+                width:40px;
+				font-size:30px;
+				color:grey;
+				background-color:#F0F8FF;
+}
+
+.cal_calendar th:hover
+{
+opacity:0.5;
+}
+.cal_calendar td
+{
+        border:1px solid black;
+       // background-color:#ffffff;
+        text-align:center;
+                width:50px;
+                height:70px;
+				font-size:40px;
+				background-color:LavenderBlush ;
+opacity:0.5;
+				
+}
+
+
+.cal_calendar td:hover
+{
+opacity:1;
+}
+.cal_today
+{
+        color:red;
+                font-weight:bold;
+}
+.cal_days_bef_aft
+{
+        color:pink;
+}
+
+.cal_calendar
+{
+        border:2px solid black;
+       // padding:1px;
+        //background-color:#4594ff;
+        width:1300px;
+        margin:auto;
+        height:470px;
+       
+}
+
+
+#header{
+
+color:#FFE4E1;
+text-align:center;
+font-size:70px;
+  font-style: italic;
+  font-weight:bold;
+}
+
+#footer
+{
+background-color:grey;
+font-size:30px;
+position:relative;
+margin-top:8px;
+}
